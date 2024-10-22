@@ -2,7 +2,7 @@
 - name: Generate XML configuration file with static client password
   hosts: localhost
   vars:
-    client_password: "{ xmlfile_password }"  # Define password directly in the playbook
+    #client_password: "{ xmlfile_password }"  # Define password directly in the playbook
   tasks:
     - name: Generate client setup XML
       template:
