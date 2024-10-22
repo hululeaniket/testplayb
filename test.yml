@@ -2,14 +2,14 @@
 - name: Generate XML configuration file with static client password
   hosts: localhost
   vars:
-    # Retrieving the password from the environment variable
-    client_password: "{{ lookup('env', 'XMLFILE_PASSWORD') }}"
-    
+    client_password: "{{ lookup('env', 'XMLFILE_PASSWORD') }}"  # Retrieving the password from the environment
+
   tasks:
     - name: Generate client setup XML
       template:
         src: install.xml.j2
         dest: /tmp/install.xml
+      no_log: true  # Hide the password and sensitive data from logs
 
     - name: Display generated XML file
       command: cat /tmp/install.xml
@@ -18,4 +18,3 @@
     - name: Show generated XML content
       debug:
         var: xml_data.stdout
-        no_log: true  # Prevent displaying sensitive data like passwords
