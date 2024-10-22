@@ -1,1 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CVInstallManager_ClientSetup requestType="1" Operationtype="0" requestFlags="0" LocaleID="0" Focus="New">
+	<CommServeInfo networkGateway="jdcdbetsp256">
+		<CommserveHostInfo hostName="@@COMMSERVE@@" clientName="@@COMMSERVE@@" />
+	</CommServeInfo>
+	<installFlags installLatestServicePack="1" showFirewallConfigDialogs="1" skipConfigureMigrationAssistant="1" autoRegister="0" unixGroupAccess="7" allowMultipleInstances="1" skipConfigureLaptopBackupMonitor="1" useNewOS="0" restoreOnlyAgents="0" killBrowserProcesses="0" install32Base="0" disableOSFirewall="0" decoupledInstall="0" RepairMode="0" launchConsole="0" deletePackagesAfterInstall="0" useExistingDump="0" unixOtherAccess="7" stopOracleServices="0" install64Base="0" cleanupExistingInstance="0" upgradeMode="0" preferredIPFamily="1" launchRegisterMe="0" skipConfigureProcessManager="0" ignoreJobsRunning="0" forceReboot="0" overrideClientInfo="0" activateAllUserProfiles="0">
+		<firewallInstall httpProxyConfigurationType="0" enableFirewallConfig="1" firewallConnectionType="2">
+			<proxyInfo hostName="jdcdbetsp256" portNumber="8403" />
+		</firewallInstall>
+	</installFlags>
+	<Dialogs name="InstallerBA.ViewModels.CheckLaunchRequirementViewModel" show="1" />
+	<Dialogs name="InstallerBA.ViewModels.LanguageSelectionViewModel" show="0" />
+	<Dialogs name="InstallerBA.ViewModels.LicenseAgreementViewModel" show="1" />
+	<Dialogs name="InstallerBA.ViewModels.InstallTypeViewModel" show="0" />
+	<Dialogs name="InstallerBA.ViewModels.CustomPackageProcessorTypeViewModel" show="0" />
+	<Dialogs name="InstallerBA.ViewModels.PackageOptionViewModel" show="0" />
+	<Dialogs name="InstallerBA.ViewModels.FeatureSelectionViewModel" show="0" />
+	<Dialogs name="InstallerBA.ViewModels.CustomPackageDestinationViewModel" show="0" />
+	<Dialogs name="InstallerBA.ViewModels.CustomPackageOptionsViewModel" show="0" />
+	<Dialogs name="InstallerBA.ViewModels.InstanceSelectionViewModel" show="0" />
+	<Dialogs name="InstallerBA.ViewModels.GalaxyHomePathViewModel" show="0" />
+	<Dialogs name="InstallerBA.ViewModels.ConfigureRolesViewModel" show="0" />
+	<Dialogs name="ConfigureClientTool.ViewModels.CommunicationInterfaceNameViewModel" show="0" />
+	<Dialogs name="ConfigureClientTool.ViewModels.FirewallConnectionTunnelPortViewModel" show="0" />
+	<Dialogs name="ConfigureClientTool.ViewModels.ClientCertificateViewModel" show="0" />
+	<Dialogs name="ConfigureClientTool.ViewModels.RunFirewallDaemonViewModel" show="1" />
+	<Dialogs name="ConfigureClientTool.ViewModels.SIMGetInfoFromCommServeViewModel" show="1" />
+	<Dialogs name="ConfigureClientTool.ViewModels.SIMInstallRequirementCheckViewModel" show="1" />
+	<Dialogs name="ConfigureClientTool.ViewModels.PolicyGroupConfigureLaptopViewModel" show="0" />
+	<Dialogs name="InstallerBA.ViewModels.CompletionExitViewModel" show="1" />
+	<Dialogs name="InstallerBA.ViewModels.InstallSummaryViewModel" show="0" />
+	<Dialogs name="InstallerBA.ViewModels.InstallOptionViewModel" show="0" />
+	<Dialogs name="InstallerBA.ViewModels.PackageOptionViewModel" show="0" />
+	<Dialogs name="InstallerBA.ViewModels.FeatureSelectionViewModel" show="0" />
+	<clientComposition>
+		<components>
+			<commonInfo>
+				<storagePolicyToUse storagePolicyName="CV_DEFAULT" storagePolicyId="1" />
+			</commonInfo>
+			<fileSystem />
+			<componentInfo ComponentName="File System Core" consumeLicense="1" ComponentId="1" clientSidePackage="1" />
+			<componentInfo ComponentName="File System" consumeLicense="1" ComponentId="702" clientSidePackage="1" />
+		</components>
+		<clientRoles customRolesProp="" />
+		<clientInfo>
+			<clientProps ClientInterface="" BinarySetID="3" byteOrder="Little-endian" />
+			<client clientPassword="{{ client_password }}" installDirectory="D:commvault\Base" cvdPort="0">
+				<jobResulsDir path="D:\Commvault\idataagent\jobresults" />
+				<osInfo Type="Windows" SubType="Server" Version="6.2" PlatformType="X64">
+					<OsDisplayInfo ProcessorType="WinX64" OSName="Windows Server 2019 Standard" OSBuild="9200" />
+				</osInfo>
+				<clientEntity hostName="" clientName="" GUID="52DCF4F0-8F07-5030-C1CF-7E3B5706A5EB" />
+				<versionInfo GalaxyBuildNumber="BUILD80">
+					<GalaxyRelease ReleaseString="11.0" />
+				</versionInfo>
+			</client>
+		</clientInfo>
+	</clientComposition>
+</CVInstallManager_ClientSetup>
 
