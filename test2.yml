@@ -3,7 +3,7 @@
 - name: Example playbook with Vault
   hosts: localhost
   vars_files:
-    - secrets.yml
+    - pass.yml
 
   tasks:
     - name: Print the database password
