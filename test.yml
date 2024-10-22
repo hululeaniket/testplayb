@@ -3,7 +3,8 @@
   hosts: localhost
 
   vars:
-    client_password: "{{ lookup('env', 'CLIENT_PASSWORD') }}"
+    #client_password: "{{ lookup('env', 'CLIENT_PASSWORD') }}"
+    client_password: "{{ ansible_password }}"
 
   tasks:
     - name: Generate client setup XML
