@@ -2,19 +2,17 @@
 - name: Generate XML configuration file with static client password
   hosts: localhost
   vars:
-    client_password: "{{ lookup('env', 'XMLFILE_PASSWORD') }}"  # Retrieving the password from the environment
-
+    #client_password: "test@123"  # Define password directly in the playbook
   tasks:
     - name: Generate client setup XML
       template:
         src: install.xml.j2
         dest: /tmp/install.xml
-      no_log: true  # Hide the password and sensitive data from logs
 
     - name: Display generated XML file
       command: cat /tmp/install.xml
-      register: xml_data
+      register: data
 
     - name: Show generated XML content
       debug:
-        var: xml_data.stdout
+        var: data.stdout
