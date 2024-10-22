@@ -1,13 +1,15 @@
 ---
 - name: Generate XML configuration file with static client password
   hosts: localhost
+
+  vars:
+    client_password: "{{ lookup('env', 'CLIENT_PASSWORD') }}"
+
   tasks:
     - name: Generate client setup XML
       template:
         src: install.xml.j2
         dest: /tmp/install.xml
-      vars:
-        client_password: "{{ ansible_password }}"  # Referencing AWX's stored password
 
     - name: Display generated XML file
       command: cat /tmp/install.xml
