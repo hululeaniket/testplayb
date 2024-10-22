@@ -1,11 +1,8 @@
 ---
 - name: Generate XML configuration file with static client password
   hosts: localhost
-
-  vars:
-    #client_password: "{{ lookup('env', 'CLIENT_PASSWORD') }}"
-    client_password: "{{ ansible_password }}"
-
+  vars_files:
+    - pass.yml
   tasks:
     - name: Generate client setup XML
       template:
