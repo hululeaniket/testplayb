@@ -3,6 +3,7 @@
   hosts: localhost
   vars:
     #client_password: "test@123"  # Define password directly in the playbook
+    client_password: "{{ lookup('env', 'ANSIBLE_PASSWORD') }}"
   tasks:
     - name: Generate client setup XML
       template:
